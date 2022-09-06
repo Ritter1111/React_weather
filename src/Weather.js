@@ -83,6 +83,7 @@ export default function Weather() {
           <br />
           <button className="butn">Current Location</button>
         </div>
+        <span><a href="https://github.com/Ritter1111/React_weather">My Github</a></span>
       </div>
     </div>
   );
