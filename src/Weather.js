@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Sky from "./Sky.mp4";
 import axios from "axios";
 
-export default function Weather(props) {
+export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState(this.props.defaultCity);
   function HandleResponse(response) {
     console.log(response.data);
     setWeatherData({

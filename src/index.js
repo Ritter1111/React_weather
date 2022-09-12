@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import Weather from "./Weather";
-
+import React from "react";
 import "./App.css";
 
 const rootElement = document.getElementById("root");
