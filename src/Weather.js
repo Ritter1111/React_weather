@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import WeatherSearch from "./WeatherSearch";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Sky from './Sky.mp4';
 import axios from "axios";
@@ -14,6 +15,7 @@ function HandleResponse(response) {
     temperature: response.data.main.temp,
     humidity: response.data.main.humidity,
     wind: response.data.wind.speed,
+    date: new Date(response.data.dt * 1000),
     city: response.data.name,
     feelsLike: response.data.main.feels_like,
     description: response.data.weather[0].description
@@ -95,7 +97,9 @@ if(weatherData.ready){
           </p>
           <span>{weatherData.city}</span>
           <br />
-          <span>Tuesday, 20:00</span>
+          <span>
+            <FormattedDate date={weatherData.date}/>
+          </span>
           <br />
           <button className="butn">Current Location</button>
         </div>
