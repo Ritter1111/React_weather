@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import WeatherSearch from "./WeatherSearch";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +7,7 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const[city, setCity] = useState(props.defaultCity);
+  const [city, setCity] = useState(props.defaultCity);
   function HandleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -23,7 +22,7 @@ export default function Weather(props) {
     });
   }
 
-  function search(){
+  function search() {
     let apiKey = "1801b872861c58c5bdc4c9b616dce426";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(HandleResponse);
@@ -34,8 +33,8 @@ export default function Weather(props) {
     search();
   }
 
-  function handleCityChange(event){
-setCity(event.target.value);
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
@@ -69,7 +68,7 @@ setCity(event.target.value);
       </div>
     );
   } else {
-search();
+    search();
     return "Loading...";
   }
 }
