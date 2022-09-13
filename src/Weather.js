@@ -4,6 +4,7 @@ import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sky from "./Sky.mp4";
 import axios from "axios";
+import PropTypes from "prop-types";
 
 
 export default function Weather(props) {
@@ -72,3 +73,6 @@ export default function Weather(props) {
     return "Loading...";
   }
 }
+Weather.propTypes = {
+  defaultCity: PropTypes.object
+};
