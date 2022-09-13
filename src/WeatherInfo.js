@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import PropTypes from "prop-types";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -9,18 +10,7 @@ export default function WeatherInfo(props) {
         <div className="col non">
           <br />
           <strong>
-            <span className="degrees_left">
-              <span className="degrees_left">
-                {Math.round(props.data.temperature)}
-              </span>
-              <a href="/" className="link link_2" value="hre">
-                degC
-              </a>
-              <span className="stick">|</span>
-              <a href="/" className="link">
-                degF
-              </a>
-            </span>
+          <WeatherTemperature celsius={props.data.temperature} />
           </strong>
           <br />
           <i className="fa-solid fa-cloud-bolt"></i>feels_like:

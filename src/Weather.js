@@ -74,5 +74,5 @@ export default function Weather(props) {
   }
 }
 Weather.propTypes = {
-  defaultCity: PropTypes.object
+  defaultCity: PropTypes.string
 };

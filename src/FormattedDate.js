@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+// setInterval(() => FormattedDate(), 1000);
 export default function FormattedDate(props) {
   let days = [
     "Sunday",
@@ -28,6 +28,7 @@ export default function FormattedDate(props) {
     </div>
   );
 }
+
 FormattedDate.propTypes = {
   date: PropTypes.object
 };
