@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function FormattedDate(props) {
   let days = [
@@ -27,3 +28,6 @@ export default function FormattedDate(props) {
     </div>
   );
 }
+FormattedDate.propTypes = {
+  date: PropTypes.object
+};
