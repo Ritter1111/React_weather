@@ -10,7 +10,7 @@ export default function WeatherInfo(props) {
         <div className="col non">
           <br />
           <strong>
-          <WeatherTemperature celsius={props.data.temperature} />
+            <WeatherTemperature celsius={props.data.temperature} />
           </strong>
           <br />
           <i className="fa-solid fa-cloud-bolt"></i>feels_like:
@@ -59,5 +59,5 @@ export default function WeatherInfo(props) {
 }
 
 WeatherInfo.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };

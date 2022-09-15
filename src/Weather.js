@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sky from "./Sky.mp4";
 import axios from "axios";
 import PropTypes from "prop-types";
-
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,13 +13,14 @@ export default function Weather(props) {
   function HandleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
       feelsLike: response.data.main.feels_like,
-      description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -66,6 +67,10 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast
+          coordinates={weatherData.coordinates}
+          data={weatherData}
+        />
       </div>
     );
   } else {
@@ -74,5 +79,5 @@ export default function Weather(props) {
   }
 }
 Weather.propTypes = {
-  defaultCity: PropTypes.string
+  defaultCity: PropTypes.string,
 };

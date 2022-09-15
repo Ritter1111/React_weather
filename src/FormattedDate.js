@@ -30,5 +30,5 @@ export default function FormattedDate(props) {
 }
 
 FormattedDate.propTypes = {
-  date: PropTypes.object
+  date: PropTypes.object,
 };
