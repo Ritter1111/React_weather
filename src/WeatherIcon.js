@@ -34,5 +34,5 @@ export default function WeatherIcon(props) {
   );
 }
 WeatherIcon.propTypes = {
-  code: PropTypes.object,
+  code: PropTypes.object
 };
