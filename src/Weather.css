@@ -63,8 +63,9 @@
   
   .Weather .butn {
     background-color: rgba(28, 28, 28, 0);
+    margin-left: 40px;
     color: white;
-    padding: 3px;
+    padding: 8px;
     border-radius: 10px;
     box-shadow: 0 -3px #7858a6 inset;
     -webkit-transition: background-color 1s ease-out;

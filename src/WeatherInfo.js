@@ -3,7 +3,6 @@ import FormattedDate from "./FormattedDate";
 import PropTypes from "prop-types";
 import WeatherTemperature from "./WeatherTemperature";
 
-
 export default function WeatherInfo(props) {
 
   return (
@@ -53,8 +52,6 @@ export default function WeatherInfo(props) {
             <FormattedDate date={props.data.date} />
           </span>
           <br />
-    
-       
         </div>
       </div>
     </div>
