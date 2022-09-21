@@ -3,7 +3,9 @@ import FormattedDate from "./FormattedDate";
 import PropTypes from "prop-types";
 import WeatherTemperature from "./WeatherTemperature";
 
+
 export default function WeatherInfo(props) {
+
   return (
     <div className="WeatherInfo">
       <div className="row">
@@ -51,7 +53,8 @@ export default function WeatherInfo(props) {
             <FormattedDate date={props.data.date} />
           </span>
           <br />
-          <button className="butn">Current Location</button>
+    
+       
         </div>
       </div>
     </div>
