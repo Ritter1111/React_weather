@@ -20,7 +20,8 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
       feelsLike: response.data.main.feels_like,
-      icon: response.data.weather[0].icon
+      icon: response.data.weather[0].icon,
+      description: response.data.weather[0].description
     });
   }
 
